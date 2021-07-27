@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/lyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+            android:id="@+id/lyt_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="@string/title_activity_register"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorTextAction" />
+
+
+        <EditText
+                android:id="@+id/et_carnumber_registration"
+                android:layout_width="280dp"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_round"
+                android:hint="Car Number"
+                android:inputType="text"
+                android:maxLength="50"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/grey_60" />
+
+        <EditText
+                android:id="@+id/et_mobile_number"
+                android:layout_width="280dp"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_round"
+                android:hint="Mobile Number"
+                android:inputType="text"
+                android:maxLength="50"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/grey_60" />
+
+        <EditText
+                android:id="@+id/et_first_name"
+                android:layout_width="280dp"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_round"
+                android:hint="First Name"
+                android:textSize="14sp"
+                android:inputType="textEmailAddress"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/grey_60" />
+
+        <EditText
+                android:id="@+id/et_lastname"
+                android:layout_width="280dp"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_round"
+                android:hint="Last Name"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/grey_60" />
+
+        <EditText
+                android:id="@+id/etpassword"
+                android:layout_width="280dp"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_round"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/grey_60" />
+
+        <EditText
+                android:id="@+id/etcity"
+                android:layout_width="280dp"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_round"
+                android:hint="City"
+                android:focusableInTouchMode="false"
+                android:maxLength="50"
+                android:clickable="false"
+                android:onClick="openCityDialog"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/grey_60" />
+
+        <EditText
+                android:id="@+id/etImei_r"
+                android:layout_width="280dp"
+                android:layout_height="@dimen/spacing_xmlarge"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edit_text_round"
+                android:hint="IMEI No"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/grey_60" />
+
+        <Button
+                android:id="@+id/btn_regiater"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_corner"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingRight="20dp"
+                android:text="Register"
+                android:onClick="onRegistration"
+                android:textColor="#fff" />
+
+        <LinearLayout
+                android:id="@+id/login_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom"
+                android:onClick="OpenLoginPage"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already Registered?"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/grey_60" />
+
+            <TextView
+                    android:id="@+id/tvlogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="@dimen/spacing_medium"
+                    android:text="Login here"
+                    android:onClick="OpenLoginPagetSecond"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/colorTextAction"
+                    android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
